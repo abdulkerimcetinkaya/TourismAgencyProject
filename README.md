@@ -7,7 +7,7 @@ Turizm acentesi projesi, otel yönetimi, oda rezervasyonları, müşteri bilgile
 # Proje Demo Videosu
 [Videoyu izlemek buraya tıklayınız.](https://www.loom.com/share/8df1e47722474365b86a4a4598d7fae0?sid=6ebd0d7f-9ffd-478d-b0b0-25117a34cf04)
 
-# Özellikler
+# Proje özellikleri
 ## Otel Yönetimi
 Yeni oteller ekleyebilirsiniz.
 Mevcut otelleri görüntüleyebilir ve düzenleyebilirsiniz.
