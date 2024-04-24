@@ -5,7 +5,7 @@ Bu proje, turizm acentelerinin operasyonlarını yönetmek için geliştirilen b
 Turizm acentesi projesi, otel yönetimi, oda rezervasyonları, müşteri bilgileri ve kullanıcı yönetimi sağlayan bir uygulamadır. Otel ekleme, oda yönetme, rezervasyon yapma ve müşteri bilgilerini güncellemeyi içerir. Kullanıcılar yönetici ve çalışan gibi farklı rollerde oluşturularak iş süreçlerinin daha etkin yönetilmesi sağlanır. Sonuç olarak turizm acentesi projesi seyahat ve konaklama süreçlerini kolaylaştırarak hizmet vermektedir.
 
 # Proje Demo Videosu
------- Yüklenecek ----------
+(https://www.loom.com/share/8df1e47722474365b86a4a4598d7fae0?sid=6ebd0d7f-9ffd-478d-b0b0-25117a34cf04)
 
 # Özellikler
 ## Otel Yönetimi
