@@ -5,7 +5,6 @@ import Dao.RoomDao;
 import core.Db;
 import core.Helper;
 import entity.*;
-
 import java.sql.Connection;
 import java.util.ArrayList;
 
@@ -46,6 +45,8 @@ public class ReservationManager {
     //Rezervasyon bilgilerini günceller.
     public boolean update(Reservation reservation) {
         if (this.getById(reservation.getId()) == null) {
+            Helper.showMsg("error");
+            return false;
         }
         return this.reservationDao.update(reservation);
     }

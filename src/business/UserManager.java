@@ -2,7 +2,6 @@ package business;
 
 import Dao.UserDao;
 import entity.User;
-
 import java.util.ArrayList;
 
 public class UserManager {
@@ -42,7 +41,8 @@ public class UserManager {
     // Kullanıcı ekleyen veya güncelleyen metod
     public boolean save(User user) {
         if (user.getId() != 0) {
-            // Eğer kullanıcının ID'si varsa (0'dan farklı), güncelleme işlemi yapılır
+            Helper.showMsg("error"); // Hata mesajı eklendi
+            return false;
         }
         return this.userDao.save(user);
     }
@@ -54,8 +54,9 @@ public class UserManager {
 
     // Kullanıcı güncelleyen metod
     public boolean update(User user) {
-        // Eğer kullanıcı ID'si bulunamazsa, güncelleme yapılmaz
         if (this.getById(user.getId()) == null) {
+            Helper.showMsg("error"); // Hata mesajı eklendi
+            return false;
         }
         return this.userDao.update(user);
     }

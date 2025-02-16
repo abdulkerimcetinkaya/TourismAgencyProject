@@ -21,7 +21,8 @@ public class Db {
         try {
             this.connection = DriverManager.getConnection(DB_URL, DB_USERNAME, DB_PASS);
         } catch (SQLException e) {
-            System.out.println(e.getMessage());
+            Helper.showMsg("Veritabanı bağlantısı kurulamadı: " + e.getMessage());
+            System.exit(1); // Kritik hata durumunda uygulamayı sonlandır
         }
     }
     // Veritabanı bağlantısını döndüren metod
@@ -32,14 +33,12 @@ public class Db {
     // Singleton tasarım deseni gereği oluşturulmuş olan veya mevcut instance'ı döndüren metod
     public static Connection getInstance() {
         try {
-            // Eğer instance null ise veya bağlantı kapalı ise yeni bir instance oluşturulur
             if (instance == null || instance.getConnection().isClosed()) {
                 instance = new Db();
             }
-
         } catch (SQLException e) {
-            // Bağlantı durumu kontrolünde hata olması durumunda hata mesajı yazdırılır
-            System.out.println(e.getMessage());
+            Helper.showMsg("Veritabanı bağlantısı hatası: " + e.getMessage());
+            System.exit(1); // Kritik hata durumunda uygulamayı sonlandır
         }
         return instance.getConnection();
     }

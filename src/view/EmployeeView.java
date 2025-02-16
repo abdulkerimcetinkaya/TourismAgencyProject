@@ -216,7 +216,6 @@ public class EmployeeView extends Layout {
         }
         // Tabloyu oluşturan createTable metodu çağrılıyor.
         createTable(this.tmdl_pencion, this.tbl_pencion, col_pencion, pancionList);
-
     }
 
 

@@ -5,7 +5,6 @@ import core.Db;
 import core.Helper;
 import entity.Hotel;
 import entity.Room;
-
 import java.sql.Connection;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -23,7 +22,6 @@ public class RoomManager {
         this.con = Db.getInstance();
         this.roomDao = new RoomDao();
         this.hotel = new Hotel();
-        this.room = room;
         this.hotelManager = new HotelManager();
     }
 

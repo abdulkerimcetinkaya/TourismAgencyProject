@@ -10,8 +10,9 @@ import entity.Hotel;
 import entity.Pension;
 import entity.Room;
 import entity.Season;
-
+import java.util.ArrayList;
 import javax.swing.*;
+import javax.swing.table.DefaultTableModel;
 
 // RoomAddView sınıfı, yeni bir oda eklemek için kullanılan arayüzü temsil eder ve Layout sınıfından türetilmiştir.
 public class RoomAddView extends Layout {
@@ -43,6 +44,9 @@ public class RoomAddView extends Layout {
     private HotelManager hotelManager;
     private SeasonManager seasonManager;
     private PensionManager pencionManager;
+    private DefaultTableModel tmdl_pencion = new DefaultTableModel();
+    private JTable tbl_pencion;
+    private Object[] col_pencion;
 
     // RoomAddView sınıfının constructor'ı.
     public RoomAddView(Object o) {
@@ -148,5 +152,9 @@ public class RoomAddView extends Layout {
         }
     }
 
+    public void loadPencionTable(ArrayList<Object[]> pancionList) {
+        // ...
+        createTable(this.tmdl_pencion, this.tbl_pencion, col_pencion, pancionList);
+    }
 }
 
